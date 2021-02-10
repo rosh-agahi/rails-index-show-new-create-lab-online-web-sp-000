@@ -5,4 +5,9 @@
   <% end %>
 </ol>
 
+<div>
+  <% @coupons.each do |coupon| %>
+    <div><%= link_to coupon.coupon_code, coupon_path(coupon) %>|<%=coupon.store%></div>
+  <% end %>
+</div>
 
