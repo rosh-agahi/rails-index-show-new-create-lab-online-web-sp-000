@@ -1,14 +1,15 @@
 <h1>Coupon Form</h1>
 
 <form method="post" action="/posts/:id">
-  <label>Coupon Code</label><br>
-  <%= text_field_tag 'coupon:coupon_code' %><br>
+  <label>Coupon Code:</label><br>
+  <%= text_field_tag :coupon_code %><br>
   
-  <label>Store Name</label><br>
-  <%= text_field_tag 'coupon:store' %><br>
+  <label>Store Name:</label><br>
+  <%= text_field_tag :store %><br>
   
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <%= submit_tag "Submit Coupon" %>
 </form>
 
 <%= params.inspect %>
+
