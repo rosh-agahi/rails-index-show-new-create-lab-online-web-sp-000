@@ -1,6 +1,6 @@
 <h1>Coupons</h1>
 <ol>
   <% @coupons.each do |c| %>
-  <li><%= c.coupon_code %></li>
+  <li><%= link_to coupon.coupon_code, coupon_path(coupon) + " | " + c.store %></li>
   <% end %>
 </ol>
